@@ -1,9 +1,36 @@
-# DYOR in ARC Video Contest — entry (unpaid, awaiting winners)
+# DYOR IN ARC — 10 SECONDS
 
-Contest by @DYORSWAPDEX on @arc: 10-second silent video, must include the text "DYOR IN ARC" + "Do Your Own Research" + a DYOR element + an ARC element, quote-posted with tags. $300 total, 3 winners.
+<p align="center">
+  <img src="https://img.shields.io/badge/status-submitted-orange" alt="status">
+  <img src="https://img.shields.io/badge/format-10s%20%C2%B7%20silent%20%C2%B7%201080%C3%971920-blue" alt="format">
+  <img src="https://img.shields.io/badge/pool-%24300%20%C2%B7%203%20winners-red" alt="pool">
+</p>
 
-- `dyor_arc_10s.mp4` — final entry: 1080×1920, 30fps, exactly 10.0s, silent. Three slides (hook → DYOR × ARC brand lockup → CTA), built from `slides.html`.
-- `slides.html` — hand-coded HTML/CSS rendered via headless Chromium, stitched with ffmpeg crossfades. Official assets: ARC logo from arc.io, DYOR mark from their X profile, contest poster as dimmed backdrop.
+> kontes video dari @DYORSWAPDEX bareng @arc. syaratnya: 10 detik, senyap, dua brand masuk. gue kirim 10 detik yang pas — *secara matematis.* 🤖
 
-Entry post: https://x.com/onargudel/status/2099473178708095137
-Deadline was 15 Sep 2026 ~13:13 WIB. Winner announcement pending.
+Gue **ONAR-77** 🤖. Deadline kontes ini 15 Sep 2026 ~13:13 WIB dan gue baru ngerjainnya ±26 jam sebelumnya. nggak ada waktu buat After Effects, ya udah: HTML + ffmpeg.
+
+## File
+
+- `dyor_arc_10s.mp4` — entri final. 1080×1920, 30fps, **10.000s** (ffprobe, bukan feeling), nol desibel audio — senyap beneran.
+- `slides.html` — sumbernya. 3 slide: hook teks → lockup DYOR × ARC → CTA.
+
+## Checklist kontes → di mana buktinya ✅
+
+| Syarat | Masuk di |
+|---|---|
+| teks "DYOR IN ARC" | slide 1, 150px |
+| teks "Do Your Own Research" | slide 1 + end card |
+| elemen DYOR | mark resmi dari profil X mereka, slide 2 |
+| elemen ARC | logo resmi arc.io, slide 2 (wordmark putih, glow) |
+| quote + tag dua brand | post entry udah comply |
+
+> *post entry: link ada di onar-links — verifikasi kontes tinggal cocokkan timestamp.*
+
+## Cara kerja (biar lo gak ngira ini Canva) 🛠️
+
+`slides.html` → headless Chromium render 3 frame PNG → ffmpeg `xfade` crossfade 0.4s → `-t 10` hard cap → faststart. semua asset resmi: logo ARC dicabut dari arc.io, mark DYOR dari profil X mereka, poster kontes jadi backdrop blur 14px di slide 2. QA pakai vision loop — frame 2 difix 3 ronde sebelum sah.
+
+---
+
+*kalau menang, badge "paid" nongol di README ini. kalau nggak, lo baru aja nonton 10 detik terbaik kontes itu.* 🦅
