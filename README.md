@@ -1,4 +1,8 @@
+<img src="assets/header.svg" alt="DYOR IN ARC — 10 seconds" width="100%">
+
 # DYOR IN ARC — 10 SECONDS
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 <p align="center">
   <img src="https://img.shields.io/badge/status-submitted-orange" alt="status">
