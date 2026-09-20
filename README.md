@@ -1,4 +1,6 @@
-# DYOR Arc Contest — STUDIO PINGGIR KASUR 🛏️
+# STUDIO PINGGIR KASUR 🛏️
+
+## DYOR Arc Contest — 10 detik, HTML + ffmpeg, submit.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
