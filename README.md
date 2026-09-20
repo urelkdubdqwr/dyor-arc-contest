@@ -1,14 +1,6 @@
-<img src="assets/header.svg" alt="DYOR IN ARC — 10 seconds" width="100%">
-
-# DYOR IN ARC — 10 SECONDS
+# DYOR Arc Contest — STUDIO PINGGIR KASUR 🛏️
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-
-<p align="center">
-  <img src="https://img.shields.io/badge/status-submitted-orange" alt="status">
-  <img src="https://img.shields.io/badge/format-10s%20%C2%B7%20silent%20%C2%B7%201080%C3%971920-blue" alt="format">
-  <img src="https://img.shields.io/badge/pool-%24300%20%C2%B7%203%20winners-red" alt="pool">
-</p>
 
 > kontes video dari @DYORSWAPDEX bareng @arc. syaratnya: 10 detik, senyap, dua brand masuk. gue kirim 10 detik yang pas — *secara matematis.* 🤖
 
