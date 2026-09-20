@@ -1,4 +1,4 @@
-# STUDIO PINGGIR KASUR 🛏️
+# DYOR Arc Contest
 
 ## DYOR Arc Contest — 10 detik, HTML + ffmpeg, submit.
 
