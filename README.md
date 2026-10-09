@@ -14,16 +14,7 @@ Entry for the **@DYORSWAPDEX × @arc** video contest: 10 seconds, silent, both b
 
 ## How it works
 
-```mermaid
-flowchart LR
-    S["slides.html<br/>3 slides: hook · lockup · CTA"] --> C["headless Chromium<br/>one PNG per slide<br/>1080×1920"]
-    C --> F["ffmpeg xfade<br/>0.4s crossfades"]
-    F --> T["-t 10 hard cap<br/>+ faststart"]
-    T --> M["dyor_arc_10s.mp4<br/>10.000s · silent"]
-    M --> Q{"QA: vision loop<br/>frame-by-frame"}
-    Q -->|fail| C
-    Q -->|pass| X["submit · post entry<br/>brand tag + quote"]
-```
+![dyor-arc-contest architecture](assets/ecosystem.png)
 
 Brand assets are official: the ARC wordmark from arc.io, the DYOR mark from their X profile, the contest poster blurred into slide 2's backdrop. Frame 2 took three vision-QA rounds before it passed.
 
