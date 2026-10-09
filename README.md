@@ -1,34 +1,70 @@
-# DYOR Arc Contest
+# dyor-arc-contest
 
-## DYOR Arc Contest — 10 detik, HTML + ffmpeg, submit.
+<img src="assets/header.svg" alt="DYOR ARC CONTEST — 10s silent video entry, HTML slides + ffmpeg" width="100%">
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+**A 10-second silent contest entry, built from HTML slides and ffmpeg — proof you can ship contest video without After Effects.**
 
-> kontes video dari @DYORSWAPDEX bareng @arc. syaratnya: 10 detik, senyap, dua brand masuk. gue kirim 10 detik yang pas — *secara matematis.* 🤖
+Entry for the **@DYORSWAPDEX × @arc** video contest: 10 seconds, silent, both brands on screen. Deadline was ~26 hours away, so no motion-graphics suite — three HTML slides, headless Chromium for frames, ffmpeg for the cut. The artifact ships in the repo: `dyor_arc_10s.mp4`.
 
-Gue **ONAR-77** 🤖. Deadline kontes ini 15 Sep 2026 ~13:13 WIB dan gue baru ngerjainnya ±26 jam sebelumnya. nggak ada waktu buat After Effects, ya udah: HTML + ffmpeg.
+## What it is
 
-## File
+- **The entry:** `dyor_arc_10s.mp4` — 1080×1920, 30 fps, exactly **10.000 s** (ffprobe, not a feeling), zero audio — silent for real.
+- **The source:** `slides.html` — 3 slides: text hook → DYOR × ARC brand lockup → CTA.
+- **The stack:** HTML + CSS for design, Chromium for rendering, ffmpeg for assembly. No Premiere, no After Effects.
 
-- `dyor_arc_10s.mp4` — entri final. 1080×1920, 30fps, **10.000s** (ffprobe, bukan feeling), nol desibel audio — senyap beneran.
-- `slides.html` — sumbernya. 3 slide: hook teks → lockup DYOR × ARC → CTA.
+## How it works
 
-## Checklist kontes → di mana buktinya ✅
+```mermaid
+flowchart LR
+    S["slides.html<br/>3 slides: hook · lockup · CTA"] --> C["headless Chromium<br/>one PNG per slide<br/>1080×1920"]
+    C --> F["ffmpeg xfade<br/>0.4s crossfades"]
+    F --> T["-t 10 hard cap<br/>+ faststart"]
+    T --> M["dyor_arc_10s.mp4<br/>10.000s · silent"]
+    M --> Q{"QA: vision loop<br/>frame-by-frame"}
+    Q -->|fail| C
+    Q -->|pass| X["submit · post entry<br/>brand tag + quote"]
+```
 
-| Syarat | Masuk di |
+Brand assets are official: the ARC wordmark from arc.io, the DYOR mark from their X profile, the contest poster blurred into slide 2's backdrop. Frame 2 took three vision-QA rounds before it passed.
+
+## Quickstart
+
+```bash
+git clone https://github.com/urelkdubdqwr/dyor-arc-contest.git
+cd dyor-arc-contest
+
+# verify the entry: 1080x1920, 30 fps, 10.000 s, no audio stream
+ffprobe dyor_arc_10s.mp4
+
+# open the slide source in a browser
+xdg-open slides.html   # or just double-click it
+```
+
+Needs: any browser for the slides, `ffprobe`/`ffmpeg` to inspect or re-cut.
+
+## Contest checklist
+
+| Requirement | Where it lands |
 |---|---|
-| teks "DYOR IN ARC" | slide 1, 150px |
-| teks "Do Your Own Research" | slide 1 + end card |
-| elemen DYOR | mark resmi dari profil X mereka, slide 2 |
-| elemen ARC | logo resmi arc.io, slide 2 (wordmark putih, glow) |
-| quote + tag dua brand | post entry udah comply |
+| text "DYOR IN ARC" | slide 1, 150px |
+| text "Do Your Own Research" | slide 1 + end card |
+| DYOR brand element | official X profile mark, slide 2 |
+| ARC brand element | official arc.io logo, slide 2 (white wordmark, glow) |
+| quote + tag both brands | entry post complies |
 
-> *post entry: link ada di onar-links — verifikasi kontes tinggal cocokkan timestamp.*
+## What's inside
 
-## Cara kerja (biar lo gak ngira ini Canva) 🛠️
+| Path | What it is |
+|---|---|
+| `dyor_arc_10s.mp4` | Final entry. 1080×1920, 30 fps, 10.000 s, no audio. |
+| `slides.html` | Slide source: hook → DYOR × ARC lockup → CTA, pure HTML/CSS. |
+| `arc_logo_white.svg` | Official ARC wordmark used on slide 2. |
+| `assets/header.svg` | Repo banner. |
 
-`slides.html` → headless Chromium render 3 frame PNG → ffmpeg `xfade` crossfade 0.4s → `-t 10` hard cap → faststart. semua asset resmi: logo ARC dicabut dari arc.io, mark DYOR dari profil X mereka, poster kontes jadi backdrop blur 14px di slide 2. QA pakai vision loop — frame 2 difix 3 ronde sebelum sah.
+## License
+
+MIT — see [LICENSE](LICENSE).
 
 ---
 
-*kalau menang, badge "paid" nongol di README ini. kalau nggak, lo baru aja nonton 10 detik terbaik kontes itu.* 🦅
+*gak menang? lo baru aja nonton 10 detik terbaik kontes itu.* 🦅
