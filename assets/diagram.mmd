@@ -1,0 +1,8 @@
+flowchart LR
+    S["slides.html<br/>3 slides: hook · lockup · CTA"] --> C["headless Chromium<br/>one PNG per slide<br/>1080×1920"]
+    C --> F["ffmpeg xfade<br/>0.4s crossfades"]
+    F --> T["-t 10 hard cap<br/>+ faststart"]
+    T --> M["dyor_arc_10s.mp4<br/>10.000s · silent"]
+    M --> Q{"QA: vision loop<br/>frame-by-frame"}
+    Q -->|fail| C
+    Q -->|pass| X["submit · post entry<br/>brand tag + quote"]
