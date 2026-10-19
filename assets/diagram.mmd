@@ -1,8 +1,9 @@
 flowchart LR
-    S["slides.html<br/>3 slides: hook · lockup · CTA"] --> C["headless Chromium<br/>one PNG per slide<br/>1080×1920"]
-    C --> F["ffmpeg xfade<br/>0.4s crossfades"]
-    F --> T["-t 10 hard cap<br/>+ faststart"]
-    T --> M["dyor_arc_10s.mp4<br/>10.000s · silent"]
-    M --> Q{"QA: vision loop<br/>frame-by-frame"}
-    Q -->|fail| C
-    Q -->|pass| X["submit · post entry<br/>brand tag + quote"]
+    H['slides.html<br/>3 slides · hook → brand lockup → CTA<br/>1080×1920 · DM Sans on #0b0c0e'] --> B['headless Chromium<br/>screenshot each slide<br/>one PNG per frame']
+    L['official brand assets<br/>arc_logo_white.svg · DYOR mark<br/>contest poster blurred backdrop'] --> H
+    B --> X['ffmpeg xfade<br/>0.4s crossfades between slides']
+    X --> T['-t 10 hard cap<br/>+moov faststart · no audio']
+    T --> M['dyor_arc_10s.mp4<br/>10.000s · 1080×1920 · 30 fps · silent']
+    M --> Q{'vision QA loop<br/>frame-by-frame'}
+    Q -->|frame fails| B
+    Q -->|pass| S['submit entry<br/>quote + tag both brands']
