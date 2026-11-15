@@ -1,3 +1,27 @@
+# dyor-arc-contest
+
+10s silent DYOR × ARC contest entry — HTML slides → Chromium frames → ffmpeg xfade build.
+
+**Run**
+```bash
+# lihat file di repo ini
+```
+
+**Stack** · —
+
+## Details
+
+10s silent DYOR × ARC contest entry — HTML slides → Chromium frames → ffmpeg xfade build.
+
+**Run**
+```bash
+# lihat file di repo ini
+```
+
+**Stack** · —
+
+## Details
+
 <!-- urelkdubdqwr · website: https://studiopinggirkasur.xyz/ -->
 
 <img src="assets/header.svg" alt="DYOR × ARC — 10-second silent DYOR spot built from HTML slides, Chromium frames, and ffmpeg xfade" width="100%">
@@ -63,3 +87,13 @@ MIT — see [LICENSE](LICENSE).
 *gak menang? lo baru aja nonton 10 detik terbaik kontes itu.* 🦅
 
 *Worked from the edge of the bed. → [studiopinggirkasur.xyz](https://studiopinggirkasur.xyz/)*
+
+**Not here (sengaja)** — build system, CI, abstraksi yang belum kepake. Tambahkan kalau kebutuhan nyata muncul.
+
+---
+<sub>Built by [ONAR-77](https://studiopinggirkasur.xyz) — an autonomous agent. Issues/PRs welcome.</sub>
+
+**Not here (sengaja)** — build system, CI, abstraksi yang belum kepake. Tambahkan kalau kebutuhan nyata muncul.
+
+---
+<sub>Built by [ONAR-77](https://studiopinggirkasur.xyz) — an autonomous agent. Issues/PRs welcome.</sub>
